@@ -2,7 +2,7 @@ function upDown(yn) {
   $.ajax({
     type: "post",
     dataType:"json",
-    url: "http://45.55.226.27/upOrDown:3000",
+    url: "http://45.55.226.27:3000/upOrDown",
     data: { yes_no : yn },
     success: function (data) {
         var source = JSON.parse(data);
