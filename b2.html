@@ -44,6 +44,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="build/style.css">
+    <script type="text/javascript" src="assets/js/custom1.js"></script>
 
 </head>
 <body style="background-image: url('pandora_back.jpg'); padding: 35px; background-size: cover">
@@ -55,7 +56,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="special-font" href="#home">reset</a></li>
+            <li><a onclick="resetVars()" class="special-font" href="#home">reset</a></li>
           </ul>
     </div>
       </div>
@@ -65,12 +66,12 @@
     <div class="row match-cols">
       <div class="col-sm-3"></div>
       <div class="col-sm-6">
-        <img class="shitshow" src="putin_meme.jpg" alt="The Dank Meme"/>
+        <img id="the-meme" class="shitshow" src="putin_meme.jpg" alt="The Dank Meme"/>
       </div>
       <div class="col-sm-3 shitshow2">
         <div Class="shitshow2">
-          <img src="up-arrow-circle.png" class="ud-btn crap"/>
-          <img src="down-arrow-circle.png" class="ud-btn crap"/>
+          <img onclick="refreshImageUp()" src="up-arrow-circle.png" class="ud-btn crap"/>
+          <img onclick="refreshImageDown()" src="down-arrow-circle.png" class="ud-btn crap"/>
         </div>
       </div>
     </div>
