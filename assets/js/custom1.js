@@ -1,40 +1,30 @@
-function refreshImageUp() {
+function upDown(yn) {
   $.ajax({
-    type: "get",
-    dataType:"json"
-    url: "/memedora.byethost13.com/up",
-    success: function (status) {
+    type: "post",
+    dataType:"json",
+    url: "http://45.55.226.27/upOrDown",
+    data: { yes_no : yn },
+    success: function (data) {
         var source = JSON.parse(data);
         document.getElementById('the-meme').src = source;
     }
   });
 
 }
-
-function refreshImageDown() {
-  $.ajax({
-    type: "get",
-    dataType:"json"
-    url: "/memedora.byethost13.com/down",
-    success: function (status) {
-        var source = JSON.parse(data);
-        document.getElementById('the-meme').src = source;
-    }
-  });
-
-}
-
-function reset() {
-  $.ajax({
-    type: "get",
-    dataType:"json"
-    url: "/memedora.byethost13.com/reset",
-    success: function (status) {
-        console.log('...');
-    }
-  });
-
-}
+//
+// function reset() {
+//   $.ajax({
+//     type: "get",
+//     dataType:"json"
+//     url: "/htdocs/down.py",
+//     data: $('Down').serialize(),
+//     success: function (data, status) {
+//         var source = JSON.parse(data);
+//         document.getElementById('the-meme').src = source;
+//     }
+//   });
+//
+// }
 
 //
 // $('#reset-btn').click(function(){
