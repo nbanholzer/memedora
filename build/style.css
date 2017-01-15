@@ -3035,9 +3035,7 @@ fieldset[disabled] .btn {
   min-width: 90px;
 }
 .btn-valign {
-  margin-top: 10%;
-  horizontal-align: middle;
-  display: block;
+  margin-top: 70%;
 }
 .btn-default {
   color: #333;
@@ -3369,16 +3367,6 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-block + .btn-block {
   margin-top: 5px;
-}
-.btn-u {
-  width: 30%;
-  display: block;
-  background: url('up-arrow-circle.png');
-}
-.btn-d {
-  width: 30%;
-  display: block;
-  background: url('down-arrow-circle.png');
 }
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
@@ -6665,10 +6653,10 @@ body {
 .crap {
   padding-top: 25%;
 }
-.row {
+.row.match-cols {
   display: table;
 }
-[class*="col-"] {
+.row.match-cols [class*="col-"] {
   float: none;
   display: table-cell;
   vertical-align: top;
