@@ -17,7 +17,7 @@ function refreshImageUp() {
   $.ajax({
     type: "get",
     dataType:"json"
-    url: "/cgi-bin/python1.py",
+    url: "/htdocs/up.py",
     data: $('Up').serialize(),
     success: function (data, status) {
         var source = JSON.parse(data);
@@ -31,7 +31,7 @@ function refreshImageDown() {
   $.ajax({
     type: "get",
     dataType:"json"
-    url: "/cgi-bin/python1.py",
+    url: "/htdocs/down.py",
     data: $('Down').serialize(),
     success: function (data, status) {
         var source = JSON.parse(data);
