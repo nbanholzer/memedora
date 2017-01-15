@@ -1,25 +1,9 @@
-function setFirstPref() {
-  $.ajax({
-    type: "post",
-    dataType:"text"
-    url: "/cgi-bin/python1.py",
-    data: {param : text},
-    success: function (data, status) {
-        var source = JSON.parse(data);
-        window.location.href = "b2.html";
-        document.getElementById('the-meme').src = source;
-    }
-  });
-
-}
-
 function refreshImageUp() {
   $.ajax({
     type: "get",
     dataType:"json"
-    url: "/cgi-bin/python1.py",
-    data: $('Up').serialize(),
-    success: function (data, status) {
+    url: "/memedora.byethost13.com/up",
+    success: function (status) {
         var source = JSON.parse(data);
         document.getElementById('the-meme').src = source;
     }
@@ -31,9 +15,8 @@ function refreshImageDown() {
   $.ajax({
     type: "get",
     dataType:"json"
-    url: "/cgi-bin/python1.py",
-    data: $('Down').serialize(),
-    success: function (data, status) {
+    url: "/memedora.byethost13.com/down",
+    success: function (status) {
         var source = JSON.parse(data);
         document.getElementById('the-meme').src = source;
     }
@@ -41,14 +24,16 @@ function refreshImageDown() {
 
 }
 
-function resetVars() {
+function reset() {
   $.ajax({
-    type: "POST",
-    url: "~/pythoncode.py",
-    data: { param: text}
-  }).done(function( o ) {
-   // do something
- });
+    type: "get",
+    dataType:"json"
+    url: "/memedora.byethost13.com/reset",
+    success: function (status) {
+        console.log('...');
+    }
+  });
+
 }
 
 //
